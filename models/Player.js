@@ -8,12 +8,15 @@ const Player = sequelize.define("Player", {
   },
   scores: {
     type: DataTypes.INTEGER,
+    defaultValue: 0,
   },
   wins: {
     type: DataTypes.INTEGER,
+    defaultValue: 0,
   },
   losses: {
     type: DataTypes.INTEGER,
+    defaultValue: 0,
   },
 });
 Player.sync();
