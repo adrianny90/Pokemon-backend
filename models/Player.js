@@ -7,13 +7,14 @@ const Player = sequelize.define("Player", {
     allowNull: false,
   },
   scores: {
-    type: DataTypes.NUMBER,
+    type: DataTypes.INTEGER,
   },
   wins: {
     type: DataTypes.INTEGER,
   },
-  losts: {
+  losses: {
     type: DataTypes.INTEGER,
   },
 });
+Player.sync();
 export default Player;
