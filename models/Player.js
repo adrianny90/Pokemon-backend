@@ -2,6 +2,12 @@ import { DataTypes } from "sequelize";
 import sequelize from "../db/index.js";
 
 const Player = sequelize.define("Player", {
+  id: {
+    type: DataTypes.UUID,
+    defaultValue: DataTypes.UUID,
+    primaryKey: true,
+    autoIncrement: true,
+  },
   name: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -15,6 +21,26 @@ const Player = sequelize.define("Player", {
     defaultValue: 0,
   },
   losses: {
+    type: DataTypes.INTEGER,
+    defaultValue: 0,
+  },
+  totalBattles: {
+    type: DataTypes.INTEGER,
+    defaultValue: 0,
+  },
+  recentBattles: {
+    type: DataTypes.DATE,
+    defaultValue: 0,
+  },
+  recentOpponent: {
+    type: DataTypes.STRING,
+    defaultValue: "",
+  },
+  resultRecentBattle: {
+    type: DataTypes.INTEGER,
+    defaultValue: 0,
+  },
+  scoreChange: {
     type: DataTypes.INTEGER,
     defaultValue: 0,
   },
