@@ -2,12 +2,6 @@ import { DataTypes } from "sequelize";
 import sequelize from "../db/index.js";
 
 const Player = sequelize.define("Player", {
-  id: {
-    type: DataTypes.UUID,
-    defaultValue: DataTypes.UUID,
-    primaryKey: true,
-    autoIncrement: true,
-  },
   name: {
     type: DataTypes.STRING,
     allowNull: false,
